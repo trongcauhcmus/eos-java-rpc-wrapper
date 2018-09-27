@@ -1,6 +1,5 @@
 package client.domain.common;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -31,7 +30,7 @@ public class ActionTrace {
 
     private String producerBlockId;
 
-    private long[] accountRamDeltas;
+    private Object[] accountRamDeltas;
 
     private String trxStatus;
 
@@ -130,6 +129,7 @@ public class ActionTrace {
     public String getBlockTime() {
         return blockTime;
     }
+
     @JsonProperty("block_time")
     public void setBlockTime(String blockTime) {
         this.blockTime = blockTime;
@@ -144,17 +144,19 @@ public class ActionTrace {
         this.producerBlockId = producerBlockId;
     }
 
-    public long[] getAccountRamDeltas() {
+    public Object[] getAccountRamDeltas() {
         return accountRamDeltas;
     }
+
     @JsonProperty("account_ram_deltas")
-    public void setAccountRamDeltas(long[] accountRamDeltas) {
+    public void setAccountRamDeltas(Object[] accountRamDeltas) {
         this.accountRamDeltas = accountRamDeltas;
     }
 
     public String getTrxStatus() {
         return trxStatus;
     }
+
     @JsonProperty("trx_status")
     public void setTrxStatus(String trxStatus) {
         this.trxStatus = trxStatus;
@@ -163,6 +165,7 @@ public class ActionTrace {
     public String getCreatedAt() {
         return createdAt;
     }
+
     @JsonProperty("createdAt")
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
