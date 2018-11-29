@@ -8,26 +8,26 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Receipt {
 
-    private Integer abiSequence;
+    private Long abiSequence;
 
     private String actDigest;
 
     private List<List<String>> authSequence = null;
 
-    private Integer codeSequence;
+    private Long codeSequence;
 
-    private Integer globalSequence;
+    private Long globalSequence;
 
     private String receiver;
 
-    private Integer recvSequence;
+    private Long recvSequence;
 
-    public Integer getAbiSequence() {
+    public Long getAbiSequence() {
         return abiSequence;
     }
 
     @JsonProperty("abi_sequence")
-    public void setAbiSequence(Integer abiSequence) {
+    public void setAbiSequence(Long abiSequence) {
         this.abiSequence = abiSequence;
     }
 
@@ -49,21 +49,21 @@ public class Receipt {
         this.authSequence = authSequence;
     }
 
-    public Integer getCodeSequence() {
+    public Long getCodeSequence() {
         return codeSequence;
     }
 
     @JsonProperty("code_sequence")
-    public void setCodeSequence(Integer codeSequence) {
+    public void setCodeSequence(Long codeSequence) {
         this.codeSequence = codeSequence;
     }
 
-    public Integer getGlobalSequence() {
+    public Long getGlobalSequence() {
         return globalSequence;
     }
 
     @JsonProperty("global_sequence")
-    public void setGlobalSequence(Integer globalSequence) {
+    public void setGlobalSequence(Long globalSequence) {
         this.globalSequence = globalSequence;
     }
 
@@ -76,12 +76,12 @@ public class Receipt {
         this.receiver = receiver;
     }
 
-    public Integer getRecvSequence() {
+    public Long getRecvSequence() {
         return recvSequence;
     }
 
     @JsonProperty("recv_sequence")
-    public void setRecvSequence(Integer recvSequence) {
+    public void setRecvSequence(Long recvSequence) {
         this.recvSequence = recvSequence;
     }
 
