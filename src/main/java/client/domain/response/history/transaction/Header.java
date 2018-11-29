@@ -9,11 +9,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Header {
 
-    private Integer timestamp;
+    private Long timestamp;
 
     private String producer;
 
-    private Integer confirmed;
+    private Long confirmed;
 
     private String previous;
 
@@ -21,18 +21,18 @@ public class Header {
 
     private String actionMroot;
 
-    private Integer scheduleVersion;
+    private Long scheduleVersion;
 
     private Object newProducers;
 
     private List<Object> headerExtensions = null;
 
-    public Integer getTimestamp() {
+    public Long getTimestamp() {
         return timestamp;
     }
 
     @JsonProperty("timestamp")
-    public void setTimestamp(Integer timestamp) {
+    public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -45,12 +45,12 @@ public class Header {
         this.producer = producer;
     }
 
-    public Integer getConfirmed() {
+    public Long getConfirmed() {
         return confirmed;
     }
 
     @JsonProperty("confirmed")
-    public void setConfirmed(Integer confirmed) {
+    public void setConfirmed(Long confirmed) {
         this.confirmed = confirmed;
     }
 
@@ -81,12 +81,12 @@ public class Header {
         this.actionMroot = actionMroot;
     }
 
-    public Integer getScheduleVersion() {
+    public Long getScheduleVersion() {
         return scheduleVersion;
     }
 
     @JsonProperty("schedule_version")
-    public void setScheduleVersion(Integer scheduleVersion) {
+    public void setScheduleVersion(Long scheduleVersion) {
         this.scheduleVersion = scheduleVersion;
     }
 

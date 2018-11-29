@@ -15,9 +15,9 @@ public class Transaction {
 
     private String blockTime;
 
-    private Integer blockNum;
+    private Long blockNum;
 
-    private Integer lastIrreversibleBlock;
+    private Long lastIrreversibleBlock;
 
     private List<ActionTrace> traces = null;
 
@@ -54,21 +54,21 @@ public class Transaction {
         this.blockTime = blockTime;
     }
 
-    public Integer getBlockNum() {
+    public Long getBlockNum() {
         return blockNum;
     }
 
     @JsonProperty("block_num")
-    public void setBlockNum(Integer blockNum) {
+    public void setBlockNum(Long blockNum) {
         this.blockNum = blockNum;
     }
 
-    public Integer getLastIrreversibleBlock() {
+    public Long getLastIrreversibleBlock() {
         return lastIrreversibleBlock;
     }
 
     @JsonProperty("last_irreversible_block")
-    public void setLastIrreversibleBlock(Integer lastIrreversibleBlock) {
+    public void setLastIrreversibleBlock(Long lastIrreversibleBlock) {
         this.lastIrreversibleBlock = lastIrreversibleBlock;
     }
 

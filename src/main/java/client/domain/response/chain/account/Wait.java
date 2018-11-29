@@ -4,24 +4,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Wait {
 
-    private Integer waitSec;
+    private Long waitSec;
 
-    private Integer weight;
+    private Long weight;
 
-    public Integer getWaitSec() {
+    public Long getWaitSec() {
         return waitSec;
     }
 
     @JsonProperty("weight_sec")
-    public void setWaitSec(Integer waitSec) {
+    public void setWaitSec(Long waitSec) {
         this.waitSec = waitSec;
     }
 
-    public Integer getWeight() {
+    public Long getWeight() {
         return weight;
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(Long weight) {
         this.weight = weight;
     }
 }

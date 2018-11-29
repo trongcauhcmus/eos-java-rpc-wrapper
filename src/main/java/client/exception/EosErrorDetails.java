@@ -10,7 +10,7 @@ public class EosErrorDetails {
 
     private String file;
 
-    private Integer lineNumber;
+    private Long lineNumber;
 
     private String method;
 
@@ -34,12 +34,12 @@ public class EosErrorDetails {
         this.file = file;
     }
 
-    public Integer getLineNumber() {
+    public Long getLineNumber() {
         return lineNumber;
     }
 
     @JsonProperty("line_number")
-    public void setLineNumber(Integer lineNumber) {
+    public void setLineNumber(Long lineNumber) {
         this.lineNumber = lineNumber;
     }
 
@@ -53,10 +53,7 @@ public class EosErrorDetails {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                .append("message", message)
-                .append("file", file)
-                .append("lineNumber", lineNumber.toString())
-                .toString();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("message", message)
+                .append("file", file).append("lineNumber", lineNumber.toString()).toString();
     }
 }

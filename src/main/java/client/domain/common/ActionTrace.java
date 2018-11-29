@@ -12,15 +12,15 @@ public class ActionTrace {
 
     private String console;
 
-    private Integer cpuUsage;
+    private Long cpuUsage;
 
-    private Integer elapsed;
+    private Long elapsed;
 
     private List<Object> inlineTraces = null;
 
     private Receipt receipt;
 
-    private Integer totalCpuUsage;
+    private Long totalCpuUsage;
 
     private String trxId;
 
@@ -56,21 +56,21 @@ public class ActionTrace {
         this.console = console;
     }
 
-    public Integer getCpuUsage() {
+    public Long getCpuUsage() {
         return cpuUsage;
     }
 
     @JsonProperty("cpu_usage")
-    public void setCpuUsage(Integer cpuUsage) {
+    public void setCpuUsage(Long cpuUsage) {
         this.cpuUsage = cpuUsage;
     }
 
-    public Integer getElapsed() {
+    public Long getElapsed() {
         return elapsed;
     }
 
     @JsonProperty("elapsed")
-    public void setElapsed(Integer elapsed) {
+    public void setElapsed(Long elapsed) {
         this.elapsed = elapsed;
     }
 
@@ -92,12 +92,12 @@ public class ActionTrace {
         this.receipt = receipt;
     }
 
-    public Integer getTotalCpuUsage() {
+    public Long getTotalCpuUsage() {
         return totalCpuUsage;
     }
 
     @JsonProperty("total_cpu_usage")
-    public void setTotalCpuUsage(Integer totalCpuUsage) {
+    public void setTotalCpuUsage(Long totalCpuUsage) {
         this.totalCpuUsage = totalCpuUsage;
     }
 
@@ -172,6 +172,5 @@ public class ActionTrace {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
-
 
 }

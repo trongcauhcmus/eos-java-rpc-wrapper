@@ -64,15 +64,16 @@ public interface EosApiRestClient {
 
     List<String> getPublicKeys();
 
-    SignedPackedTransaction signTransaction(PackedTransaction unsignedTransaction, List<String> publicKeys, String chainId);
+    SignedPackedTransaction signTransaction(PackedTransaction unsignedTransaction, List<String> publicKeys,
+            String chainId);
 
-    void setWalletTimeout(Integer timeout);
+    void setWalletTimeout(Long timeout);
 
     String signDigest(String digest, String publicKey);
 
     String createKey(String walletName, WalletKeyType walletKeyType);
 
-    Actions getActions(String accountName, Integer pos, Integer offset);
+    Actions getActions(String accountName, Long pos, Long offset);
 
     Transaction getTransaction(String id);
 

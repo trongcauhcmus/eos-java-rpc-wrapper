@@ -39,7 +39,7 @@ public interface EosWalletApiService {
     Call<List<String>> getPublicKeys();
 
     @POST("/v1/wallet/set_timeout")
-    Call<Void> setTimeout(@Body Integer timeOut);
+    Call<Void> setTimeout(@Body Long timeOut);
 
     @POST("/v1/wallet/sign_digest")
     Call<String> signDigest(@Body List<String> parameters);

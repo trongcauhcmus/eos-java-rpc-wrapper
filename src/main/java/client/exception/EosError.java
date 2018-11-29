@@ -5,7 +5,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class EosError {
 
-    private Integer code;
+    private Long code;
 
     private String name;
 
@@ -13,15 +13,15 @@ public class EosError {
 
     private EosErrorDetails[] details;
 
-    private EosError(){
+    private EosError() {
 
     }
 
-    public Integer getCode() {
+    public Long getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(Long code) {
         this.code = code;
     }
 
@@ -51,10 +51,7 @@ public class EosError {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                .append("code", code)
-                .append("name", name)
-                .append("what", what)
-                .toString();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code).append("name", name)
+                .append("what", what).toString();
     }
 }

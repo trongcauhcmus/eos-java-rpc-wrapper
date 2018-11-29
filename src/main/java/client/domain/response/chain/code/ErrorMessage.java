@@ -6,16 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ErrorMessage {
 
-    private Integer errorCode;
+    private Long errorCode;
 
     private String errorMsg;
 
-    public Integer getErrorCode() {
+    public Long getErrorCode() {
         return errorCode;
     }
 
     @JsonProperty("error_code")
-    public void setErrorCode(Integer errorCode) {
+    public void setErrorCode(Long errorCode) {
         this.errorCode = errorCode;
     }
 

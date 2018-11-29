@@ -16,9 +16,8 @@ public class EosApiServiceGenerator {
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
-    private static Retrofit.Builder builder =
-            new Retrofit.Builder()
-                    .addConverterFactory(JacksonConverterFactory.create());
+    private static Retrofit.Builder builder = new Retrofit.Builder()
+            .addConverterFactory(JacksonConverterFactory.create());
 
     private static Retrofit retrofit;
 
@@ -42,7 +41,8 @@ public class EosApiServiceGenerator {
                 return response.body();
             } else {
                 EosApiError apiError = getEosApiError(response);
-                throw new EosApiException(apiError.getDetailedMessage(), EosApiErrorCode.get(apiError.getEosErrorCode()));
+                throw new EosApiException(apiError.getDetailedMessage(),
+                        EosApiErrorCode.get(apiError.getEosErrorCode()));
             }
         } catch (IOException e) {
             throw new EosApiException(e);

@@ -12,7 +12,7 @@ public class Action {
 
     private ActionTrace actionTrace;
 
-    private Integer blockNum;
+    private Long blockNum;
 
     private String blockTime;
 
@@ -36,12 +36,12 @@ public class Action {
         this.actionTrace = actionTrace;
     }
 
-    public Integer getBlockNum() {
+    public Long getBlockNum() {
         return blockNum;
     }
 
     @JsonProperty("block_num")
-    public void setBlockNum(Integer blockNum) {
+    public void setBlockNum(Long blockNum) {
         this.blockNum = blockNum;
     }
 

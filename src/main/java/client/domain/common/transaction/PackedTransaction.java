@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -21,7 +20,7 @@ public class PackedTransaction {
 
     private String refBlockNum;
 
-    private Integer maxCpuUsageMs;
+    private Long maxCpuUsageMs;
 
     private List<String> contextFreeData;
 
@@ -31,8 +30,7 @@ public class PackedTransaction {
 
     private List<TransactionAction> actions;
 
-    private Integer delaySec;
-
+    private Long delaySec;
 
     public String getRegion() {
         return region;
@@ -68,12 +66,12 @@ public class PackedTransaction {
         this.refBlockPrefix = refBlockPrefix;
     }
 
-    public Integer getMaxCpuUsageMs() {
+    public Long getMaxCpuUsageMs() {
         return maxCpuUsageMs;
     }
 
     @JsonProperty("max_cpu_usage_ms")
-    public void setMaxCpuUsageMs(Integer maxCpuUsageMs) {
+    public void setMaxCpuUsageMs(Long maxCpuUsageMs) {
         this.maxCpuUsageMs = maxCpuUsageMs;
     }
 
@@ -95,7 +93,6 @@ public class PackedTransaction {
         this.contextFreeData = contextFreeData;
     }
 
-
     public List<TransactionAction> getContextFreeActions() {
         return contextFreeActions;
     }
@@ -113,12 +110,12 @@ public class PackedTransaction {
         this.actions = actions;
     }
 
-    public Integer getDelaySec() {
+    public Long getDelaySec() {
         return delaySec;
     }
 
     @JsonProperty("delay_sec")
-    public void setDelaySec(Integer delaySec) {
+    public void setDelaySec(Long delaySec) {
         this.delaySec = delaySec;
     }
 
